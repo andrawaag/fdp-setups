@@ -1,10 +1,12 @@
-# docker-compose.yml
+ # docker-compose.yml
 
  version: '3'
  services:
 
      fdp:
          image: fairdata/fairdatapoint:1.15
+         volumes:
+             - ./application.yml:/fdp/application.yml:ro
 
      fdp-client:
          image: fairdata/fairdatapoint-client:1.15
@@ -19,3 +21,17 @@
              - 27017:27017
          volumes:
              - ./mongo/data:/data/db
+
+     blazegraph:
+         image: metaphacts/blazegraph-basic:2.2.0-20160908.003514-6
+         ports:
+             - 8080:8080
+         volumes:
+             - ./blazegraph:/blazegraph-data
+
+     fusekijena:
+	image: atomgraph/fuseki
+        ports:
+	     - 3030:3030
+        volumes:
+             - ./fuseki:/fuseki

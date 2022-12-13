@@ -1,4 +1,9 @@
 metadataProperties:
     language: http://id.loc.gov/vocabulary/iso639-1/en
-    license: http://rdflicense.appspot.com/rdflicense/cc-by-nc-nd3.0
+    license: http://rdflicense.appspot.com/rdflicense/cc0
     accessRightsDescription: This resource has no access restriction
+
+repository:
+    type: 5
+    blazegraph:
+        url: http://blazegraph:8080/blazegraph	
