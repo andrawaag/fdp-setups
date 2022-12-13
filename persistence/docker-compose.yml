@@ -28,10 +28,3 @@
              - 8080:8080
          volumes:
              - ./blazegraph:/blazegraph-data
-
-     fusekijena:
-	image: atomgraph/fuseki
-        ports:
-	     - 3030:3030
-        volumes:
-             - ./fuseki:/fuseki
